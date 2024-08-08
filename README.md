@@ -41,6 +41,7 @@ convention:
   - merge
   commitScopes: []
   releaseTagGlobPattern: v[0-9]*.[0-9]*.[0-9]*
+  ignoreRegexPattern: "^fixup!"
 changelog:
   commitTypes:
   - feat
@@ -76,6 +77,8 @@ changelog:
     * default `*`  
   * `issueRegexPattern` regex pattern to find issue IDs
     * e.g. Jira issue pattern `[A-Z]{3,}-\\d+`
+  * `ignoreRegexPattern` regex pattern to ignore check for special commit
+    * e.g. Lazygit temporary commit `^fixup!`
  
 * `changelog` 
   * `commitTypes` filter commits by type
